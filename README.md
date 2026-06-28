@@ -1,4 +1,4 @@
-# ESP32 PM Node — AI-Based Predictive Maintenance
+# ESP32 PM Node — TinyML Motor Imbalance Fault Classifier
 
 > Real-time motor health monitoring using TinyML on ESP32 with ADXL345 vibration sensing, Edge Impulse classification, and a live WiFi dashboard.
 
@@ -76,6 +76,7 @@ Edge Impulse model (DSP: FFT 512 → 582 features → NN classifier)
 
 | Parameter | Value |
 |---|---|
+| Accuracy | 100% on controlled test set (single motor, fixed mounting, lab conditions) |
 | Framework | Edge Impulse |
 | Sensor | ADXL345 (X, Y, Z axes) |
 | Sample rate | 400 Hz |
@@ -188,6 +189,14 @@ ESP32-PMNode-Predictive-Maintenance/
 
 ---
 
+## Limitations & Future Work
+- Trained on single motor at fixed RPM and mounting position
+- Detects mass imbalance only — bearing wear, misalignment, and 
+  looseness not yet covered
+- Real-world deployment would require retraining across multiple 
+  motors and operating conditions
+- No anomaly detection enabled in current model
+
 ## Roadmap
 
 - [x] ADXL345 data collection at 400 Hz
@@ -200,6 +209,9 @@ ESP32-PMNode-Predictive-Maintenance/
 - [ ] OTA firmware updates
 - [ ] FreeRTOS dual-core architecture
 - [ ] Model retraining pipeline
+- [ ]  Multi-motor dataset collection for generalization
+- [ ] Bearing fault detection (new fault class)
+- [ ] RPM-aware classification
 
 ---
 
