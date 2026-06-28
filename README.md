@@ -14,7 +14,7 @@
 | Dark-mode dashboard | Serial output |
 |---|---|
 | ![Dashboard](docs/Web_Dashboard.PNG) | ![Serial](docs/serial_output.PNG) 
-|  ![Wiring](docs/wiring_diagram.PNG)  | ![setup](docs/setup.PNG)
+|  ![Wiring](docs/wiring_diagram.PNG)  | ![setup](docs/setup.png)
 
 ---
 
